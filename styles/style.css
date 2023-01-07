@@ -40,5 +40,65 @@
 /*Gilroy font ends*/
 
 body {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy', sans-serif; 
 }
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.header__wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    /* min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; */
+}
+
+._container {
+    max-width: 1270;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    min-height: 125px;
+}
+
+.header__main {
+    display: flex;
+    align-items: center;
+    flex: 0 0 494/1240 * 100%;
+}
+
+.header__logo {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29 / 24 * 100%;
+    color: #000000;
+}
+
+.menu__link, .menu__sub-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3A3A3A;
+}
+
+.menu__item, .menu__sub-list {
+    list-style-type: none;
+}
+
