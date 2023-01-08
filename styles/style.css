@@ -79,7 +79,7 @@ body {
 .header__main {
     display: flex;
     align-items: center;
-    flex: 0 0 494/1240 * 100%; /*invalid property value*/
+    flex: 0 0 494/1240*100%; /*invalid property value*/
 }
 
 .header__logo {
@@ -90,15 +90,70 @@ body {
     color: #000000;
 }
 
-.menu__link, .menu__sub-link {
+.menu {
+    flex: 0 1 420px;
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu__item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px 3px;
+    padding: 5px 0px;
+    position: relative;
+}
+
+.menu__link {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     color: #3A3A3A;
+    color: inherit;
+    transition: color 0.3s ease 0s;
 }
 
-.menu__item, .menu__sub-list {
-    list-style-type: none;
+.menu__arrow {
+    margin: 0px 0px 0px 8px;
+    transition: all 0.3s ease 0s;
+    font-size: 12px;
 }
+
+.menu__sub-list {
+    list-style-type: none;
+    position: relative;
+    background-color: #E89F71;
+    padding: 15px;
+    flex: 1 1 100%;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    transform: translate(0px, 10px);
+    visibility: hidden;
+    min-width: 200px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.menu__sub-item:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+}
+
+.menu__sub-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+}
+
+
 
