@@ -12,118 +12,113 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__wrapper">
-        <div class="header__container _container">
-          <div class="header__body">
-            <div class="header__main">
-              <a href="" class="header__logo">Funiro.</a>
-              <div class="header__menu menu">
-                <nav class="menu__body">
-                  <ul class="menu__list">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Products</a>
-                      <button
-                        data-spoller
-                        type="button"
-                        class="menu__arrow _icon-arrow-down"
-                      >
-                        <img src="./images/icons/Arrow-down.svg" />
-                      </button>
-                      <ul class="menu__sub-list">
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Product 1</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Product 2</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Product 3</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Product 4</a>
-                        </li>
-                      </ul>
+    <header>
+      <div class="wrapper__navbar">
+        <nav class="navbar">
+          <div class="container__navbar">
+            <a href="#" class="navbar__brand">Funiro.</a>
+            <div class="navbar__list-body">
+              <ul class="navbar__list">
+                <li>
+                  <a href="#" class="navbar__products-link navbar__link"
+                    >Products</a
+                  >
+                  <img
+                    src="./images/icons/menu-arrow.svg"
+                    alt=""
+                    class="arrow__link"
+                  />
+                  <ul class="navbar__products-sublist">
+                    <li>
+                      <a href="#" class="navbar__product-link link">Product1</a>
                     </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Rooms</a>
-                      <button
-                        data-spoller
-                        type="button"
-                        class="menu__arrow _icon-arrow-down"
-                      >
-                        <img src="./images/icons/Arrow-down.svg" />
-                      </button>
-                      <ul class="menu__sub-list">
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Room 1</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Room 2</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Room 3</a>
-                        </li>
-                        <li class="menu__sub-item">
-                          <a href="" class="menu__sub-link">Room 4</a>
-                        </li>
-                      </ul>
+                    <li>
+                      <a href="#" class="navbar__product-link link">Product2</a>
                     </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Inspirations</a>
+                    <li>
+                      <a href="#" class="navbar__product-link link">Product3</a>
                     </li>
                   </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="header__search">
-              <div class="search-form">
-                <button type="button" class="search-form__icon _icon-search">
-                  <img src="./images/./icons/search_icon.svg" />
-                </button>
-                <form action="#" class="search-form__item">
-                  <button type="submit" class="search-form__btn _icon-search">
-                    <img src="./images/./icons/search_icon.svg" />
-                  </button>
-                  <input
-                    autocomplete="off"
-                    type="text"
-                    name="form[]"
-                    data-value="Search for minimalist chair"
-                    class="search-form__input"
+                </li>
+
+                <li>
+                  <a href="#" class="navbar__rooms-list navbar__link">Rooms</a>
+                  <img
+                    src="./images/icons/menu-arrow.svg"
+                    alt=""
+                    class="arrow__link"
                   />
-                </form>
-              </div>
+                  <ul class="navbar__rooms-sublist">
+                    <li>
+                      <a href="#" class="navbar__room-link link">Room1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="navbar__room-link link">Room2</a>
+                    </li>
+                    <li>
+                      <a href="#" class="navbar__room-link link">Room3</a>
+                    </li>
+                    <li>
+                      <a href="#" class="navbar__room-link link">Room4</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="navbar__inspirations navbar__link"
+                    >Inspirations</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="header__actions actions-header">
-              <a href="" class="action-header__item_favorits _icon-favorite"
-                ><img src="./images/icons/heart-b_icon.svg"
-              /></a>
-              <div class="actions-header__item cart-header">
-                <a href="" class="cart-header__icon _icon-cart"
-                  ><img src="./images/icons/cart_icon.svg"
-                /></a>
-                <div class="cart-header__body">
-                  <ul class="cart-header__list cart-list"></ul>
-                </div>
-              </div>
-              <a
-                href=""
-                class="action-header__item actions-header__item_user _ibg"
-                ><img src="./images/icons/avatar.jpg" alt="Avatar"
-              /></a>
+
+            <div class="navbar__search-field">
+              <input
+                type="text"
+                class="search-field"
+                placeholder="Search for minimalist chair"
+              />
+              <img
+                src="./images/icons/search_icon.svg"
+                alt="Search icon"
+                class="search-icon"
+              />
             </div>
-            <button type="button" class="icon-menu">
+
+            <div class="navbar__icons">
+              <a href="#" class="navbar__favorite-icon">
+                <img
+                  src="./images/icons/heart-b_icon.svg"
+                  alt="Selected products"
+                  class="navbar__favorite-items"
+                />
+              </a>
+
+              <a href="#" class="navbar__cart-icon">
+                <img
+                  src="./images/icons/cart_icon.svg"
+                  alt="Cart"
+                  class="navbar__cart"
+                />
+              </a>
+
+              <a href="#" class="navbar__user-avatar">
+                <img
+                  src="./images/icons/avatar.jpg"
+                  alt="Avatar"
+                  class="user-avatar"
+                />
+              </a>
+            </div>
+            <div class="navbar__burgermenu">
               <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            </div>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
-    <section class="main-slider">
+    <section class="gallery__main-slider">
       <div class="main-slider__container">
         <div class="main-slider__body">
           <div class="main-slider__content content-main">
@@ -151,6 +146,21 @@
                 <button type="button" class="slider-arrow slider-arrow__right">
                   <img src="./images/icons/arrow-slider-right-active.svg" />
                 </button>
+              </div>
+            </div>
+            <div class="slider-main__body">
+              <div class="slider-main__slide">
+                <div class="slider-main__image">
+                  <img
+                    src="./images/images_header/main-gallery1.jpg"
+                    alt="Sofa"
+                  />
+                </div>
+                <a href="" class="slider-main__content">
+                  <div class="slider-main__title">Bohauss</div>
+                  <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                  <div class="slider-main__price">Rp 17.000.000</div>
+                </a>
               </div>
             </div>
           </div>

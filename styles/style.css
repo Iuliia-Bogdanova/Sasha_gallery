@@ -1,159 +1,322 @@
 /*Gilroy font starts*/
 
 @font-face {
-    font-family: 'Gilroy';
-    font-weight: 400;
-    font-style: normal;
-    src: local(''),
-        url('./fonts/Gilroy-Regular.ttf') format('truetype'),
-        url('./fonts/Gilroy-Regular.woff') format('woff');
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-style: normal;
+  src: local(""), url("./fonts/Gilroy-Regular.ttf") format("truetype"),
+    url("./fonts/Gilroy-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    font-weight: 500;
-    font-style: normal;
-    src: local(''),
-        url('./fonts/Gilroy-Medium.ttf') format('truetype'),
-        url('./fonts/Gilroy-Medium.woff') format('woff');
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-style: normal;
+  src: local(""), url("./fonts/Gilroy-Medium.ttf") format("truetype"),
+    url("./fonts/Gilroy-Medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    font-weight: 600;
-    font-style: normal;
-    src: local(''),
-        url('./fonts/Gilroy-Semibold.ttf') format('truetype'),
-        url('./fonts/Gilroy-Semibold.woff') format('woff');
-
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-style: normal;
+  src: local(""), url("./fonts/Gilroy-Semibold.ttf") format("truetype"),
+    url("./fonts/Gilroy-Semibold.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    font-weight: 700;
-    font-style: normal;
-    src: local(''),
-        url('./fonts/Gilroy-Bold.ttf') format('truetype'),
-        url('./fonts/Gilroy-Bold.woff') format('woff');
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-style: normal;
+  src: local(""), url("./fonts/Gilroy-Bold.ttf") format("truetype"),
+    url("./fonts/Gilroy-Bold.woff") format("woff");
 }
 
 /*Gilroy font ends*/
 
 body {
-    font-family: 'Gilroy', sans-serif; 
+  font-family: "Gilroy", sans-serif;
 }
 
-.header {
+/*Navbar style stars*/
+
+.wrapper__navbar {
+  height: 200vh;
+  margin: 0;
+  background: linear-gradient(to right, #f9f1e7 67%, #fcf8f3 33%);
+}
+
+.navbar {
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 42px 0 42px 0;
+}
+
+.navbar__colored {
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.navbar a {
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navbar li {
+  list-style-type: none;
+  position: relative;
+}
+
+.container__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: auto;
+  padding: 0 70px 0 70px;
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.02px;
+  color: black;
+  margin: 0 41px 0 0;
+  z-index: 15;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: space-between;
+  width: 336px;
+  padding: 0;
+  margin: 0 43px 0 0;
+}
+
+.navbar__link {
+  color: #3a3a3a;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navbar__link:hover,
+.navbar__link:active {
+  color: #e89f71;
+}
+
+.navbar__products-sublist {
+  display: none;
+  min-width: 135px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 10px 0 0 0;
+}
+
+.navbar__rooms-sublist {
+  display: none;
+  min-width: 120px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 10px 0 0 0;
+}
+
+.navbar__products-sublist > li,
+.navbar__rooms-sublist > li {
+  background: #e89f71;
+  padding: 5px 10px 5px 5px;
+}
+
+.navbar__list > li:hover .navbar__products-sublist,
+.navbar__list > li:hover .navbar__rooms-sublist {
+  display: block;
+}
+
+.navbar__list > li._active .navbar__products-sublist,
+.navbar__list > li._active .navbar__rooms-sublist {
+  display: block;
+  height: 100%;
+}
+
+.navbar__list > li._active .arrow__link {
+  transform: rotate(-180deg);
+}
+
+.link {
+  color: white;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar__search-field {
+  display: inline-flex;
+  background-color: white;
+  width: 473px;
+  height: 45px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+  order: -1;
+}
+
+.search-field {
+  width: 300px;
+  border: 0;
+}
+
+.search-field:focus {
+  outline: none;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__icons img {
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 1074px) {
+  .container__navbar {
+    padding: 0 20px 0 0;
+  }
+
+  .navbar__brand {
+    margin: 0 20px 0 0;
+  }
+
+  .navbar__list {
+    width: 250px;
+    margin: 0 10px 0 0;
+  }
+
+  .navbar__search-field {
+    width: 253px;
+  }
+
+  .navbar__icons img {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__burgermenu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 18px;
+    z-index: 10;
+  }
+
+  .navbar__burgermenu span,
+  .navbar__burgermenu::before,
+  .navbar__burgermenu::after {
     position: absolute;
     width: 100%;
-    top: 0;
+    height: 10%;
     left: 0;
+    transition: all 0.3s ease 0s;
+    background-color: black;
+  }
 
-}
+  .navbar__burgermenu::before,
+  .navbar__burgermenu::after {
+    content: "";
+  }
 
-.header__wrapper {
-    position: fixed;
-    width: 100%;
-    left: 0;
+  .navbar__burgermenu::before {
     top: 0;
-    z-index: 50;
-    /* min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; */
-}
+  }
 
-._container {
-    max-width: 1270;
-    margin: 0 auto;
-    padding: 15px;
-}
+  .navbar__burgermenu::after {
+    bottom: 0;
+  }
 
-.header__body {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    min-height: 125px;
-}
+  .navbar__burgermenu span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
 
-.header__main {
-    display: flex;
-    align-items: center;
-    flex: 0 0 494/1240*100%; /*invalid property value*/
-}
+  .navbar__burgermenu._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
 
-.header__logo {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29 / 24 * 100%; /*invalid property value*/
-    color: #000000;
-}
+  .navbar__burgermenu._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
 
-.menu {
-    flex: 0 1 420px;
-}
+  .navbar__burgermenu._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
 
-.menu__list {
+  .container__navbar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+  }
 
-.menu__item {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
+  .navbar__brand {
+    margin: 0 20px 0 5px;
+  }
+
+  .navbar__list-body {
+    order: 3;
+    display: none;
+  }
+
+  .navbar__list-body._active {
+    display: block;
+  }
+
+  .navbar__list {
+    display: block;
+    padding: 15px 0 0 10px;
+  }
+
+  .navbar__list > li {
+    padding: 10px 5px 5px 5px;
+  }
+
+  .navbar__products-sublist,
+  .navbar__rooms-sublist {
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  .navbar__search-field {
+    order: 2;
+    display: none;
+  }
+
+  .navbar__icons {
+    width: 50%;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0px 3px;
-    padding: 5px 0px;
-    position: relative;
+  }
 }
 
-.menu__link {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: #3A3A3A;
-    color: inherit;
-    transition: color 0.3s ease 0s;
-}
-
-.menu__arrow {
-    margin: 0px 0px 0px 8px;
-    transition: all 0.3s ease 0s;
-    font-size: 12px;
-}
-
-.menu__sub-list {
-    list-style-type: none;
-    position: relative;
-    background-color: #E89F71;
-    padding: 15px;
-    flex: 1 1 100%;
-    opacity: 0;
-    transition: all 0.3s ease 0s;
-    transform: translate(0px, 10px);
-    visibility: hidden;
-    min-width: 200px;
-    left: 0;
-    position: absolute;
-    top: 100%;
-}
-
-.menu__sub-item:not(:last-child) {
-    margin: 0px 0px 5px 0px;
-}
-
-.menu__sub-link {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 120%;
-    color: #fff;
-}
-
-
-
+/*Navbar style ends*/
