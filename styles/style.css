@@ -368,11 +368,18 @@ body {
 }
 
 .main-slider__content {
-  flex: 0 0 494/1240 * 100%;
+  display: flex;
+  flex: 0 0 494;
+}
+
+.main-slider__slider {
+  display: flex;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .content-main {
-  /* position: relative; */
+  position: relative;
   z-index: 5;
   padding-right: 15px;
   padding-left: 15px;
