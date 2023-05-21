@@ -1,2 +1,3 @@
 Sasha_gallery
-beautiful responsive images gallery based on Slider Swiper
+
+Beautiful responsive images gallery based on Slider Swiper
