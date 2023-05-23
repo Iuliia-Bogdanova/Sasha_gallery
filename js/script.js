@@ -39,4 +39,37 @@ if (images.length) {
             </div>
         `;
     });
+
+    const background = `
+        <div class="background swiper">
+            <div class="background__wrapper swiper-wrapper">
+                ${backgroundSlides}
+            </div>
+        </div>
+    `;
+    const text = `
+        <div class="text swiper">
+            <div class="text__wrapper swiper-wrapper">
+                ${textSlides}
+            </div>
+        </div>
+    `;
+
+    page.insertAdjacentHTML("afterbegin", background);
+    page.insertAdjacentHTML("beforeend", text);
+
+    let pageBgSlider = new Swiper(".background", {
+        speed: 500
+    });
+    let pageBTextSlider = new Swiper(".text", {
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+    });
+
+    // Controll
+    pageSlider.controller.control = pageBgSlider;
+    pageBgSlider.controller.control = pageBTextSlider;
 }
