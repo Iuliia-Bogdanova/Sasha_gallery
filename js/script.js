@@ -16,6 +16,10 @@ let pageSlider = new Swiper(".slider", {
         centeredSlides: true
         }
     }
+    simulateTouch: true,
+    touchRatio: 1,  // значение по умолчанию, 0 - false
+    touchAngle: 45, // значение по умолчанию на горизонтальный свайп - до 45 deg
+    grabCursor: true,
 });
 
 const page = document.querySelector('.page');
