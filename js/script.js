@@ -15,7 +15,7 @@ let pageSlider = new Swiper(".slider", {
         slidesPerView: 2,
         centeredSlides: true
         }
-    }
+    },
     simulateTouch: true,
     touchRatio: 3,  // значение по умолчанию, 0 - false
     touchAngle: 45, // значение по умолчанию на горизонтальный свайп - до 45 deg
