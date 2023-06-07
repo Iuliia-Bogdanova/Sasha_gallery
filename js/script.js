@@ -2,10 +2,10 @@
 
 let pageSlider = new Swiper(".slider", {
     speed: 3000,
-    // scrollbar: {
-    //     el: ".slider__scrollbar",
-    //     draggable: true,
-    // },
+    scrollbar: {
+        el: ".slider__scrollbar",
+        draggable: true,
+    },
     breakpoints: {
         "320": {
         slidesPerView: 1,
@@ -17,7 +17,7 @@ let pageSlider = new Swiper(".slider", {
         }
     },
     simulateTouch: true,
-    touchRatio: 3,  // значение по умолчанию, 0 - false
+    touchRatio: 1,  // значение по умолчанию, 0 - false
     touchAngle: 45, // значение по умолчанию на горизонтальный свайп - до 45 deg
     grabCursor: true,
 });
