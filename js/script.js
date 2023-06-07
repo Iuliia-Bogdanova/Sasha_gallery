@@ -2,10 +2,10 @@
 
 let pageSlider = new Swiper(".slider", {
     speed: 1000,
-    scrollbar: {
-        el: ".slider__scrollbar",
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: ".slider__scrollbar",
+    //     draggable: true,
+    // },
     breakpoints: {
         "320": {
         slidesPerView: 1,
